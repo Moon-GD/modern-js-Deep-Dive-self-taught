@@ -6,7 +6,7 @@ function isFalsy(target) {
     }
 }
 
-isFalsy(undefined);
-isFalsy(null);
-isFalsy(NaN);
-isFalsy('');
+isFalsy(undefined);  // false
+isFalsy(null);  // false
+isFalsy(NaN);  // false
+isFalsy('');  // false
