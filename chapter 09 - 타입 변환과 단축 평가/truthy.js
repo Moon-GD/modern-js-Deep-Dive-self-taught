@@ -6,6 +6,6 @@ function isTruthy(target) {
     }
 }
 
-isTruthy([]);
-isTruthy('0');
-isTruthy({});
+isTruthy([]);  // true
+isTruthy('0');  // true
+isTruthy({});  // true
