@@ -1,4 +1,4 @@
-# Chapter 11 : 원시 값과 객체의 비교, Summary
+# Chapter 12 : 함수, Summary
 
 <br>
 
