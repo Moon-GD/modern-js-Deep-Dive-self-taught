@@ -4,6 +4,8 @@ const b = new Number(3);
 
 console.log(a);  // 3
 console.log(b);  // [Number: 3]
+console.log(a == b);  // true
+console.log(a === b);  // false
 
 // Object - scope-safe constructor pattern이 적용되어 있음
 const c = Object();
@@ -11,3 +13,5 @@ const d = new Object();
 
 console.log(c);  // {}
 console.log(d);  // {}
+console.log(c == d);  // false
+console.log(c === d);  // false
