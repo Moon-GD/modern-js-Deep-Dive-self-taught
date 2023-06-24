@@ -50,3 +50,14 @@
 #### 5️⃣ define property
 - <a href="./defineProperties.js">예제 파일</a> 쭉 읽어보는 게 이해가 더 쉬울 것!
 - property descriptor 객체에 누락된 property의 기본 값 :
+
+<br>
+  
+|property|property attribute|default value|
+|:-|:-|:-|
+| value | [[ Value ]] | undefined |
+| get | [[ Get ]] | undefined |
+| set | [[ Set ]] | undefined |
+| writable | [[ Writable ]] | false |
+| enumerable | [[ Enumerable ]] | false |
+| configurable | [[ Configurable ]] | false |
