@@ -38,4 +38,6 @@
 - new 연산자와 생성자 함수로서 호출되었을 경우 : 해당 함수 내부에서 new.target은 함수 자신을 의미
 - 그 이외의 경우 : undefined
 - <a href="./newTarget.js">new.target 활용 예제 파일</a>
-- 참고로, 대부분의 빌트인 생성자 함수 Object, String, Number, Boolean, Function 등은 new 연산자 없이 호출해도 new 연산자와 함께 호출된 것처럼 동일하게 동작
+- 참고로, 대부분의 빌트인 생성자 함수 Object, String, Number, Boolean, Function 등은 new 키워드 활용 여부를 점검하고 적절한 값을 반환
+- Object, Function의 경우 new 연산자 없이 호출해도 new 연산자가 함께 활용된 것처럼 동작
+- Number, String, Boolean 생성자 함수는 new 연산자 활용 여부에 따라 다른 값이 반환됨 → <a href="./builtInConstructor.js">차이를 보여주는 예제 파일</a>
