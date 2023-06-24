@@ -31,6 +31,9 @@
 - 2. accessor property 
     - 자체적으로 값을 가지는 것이 아니라, 다른 property의 값을 가져오거나 설정하는데에 활용
     - property attribute : get, set, enumerable, configurable
+        - configurable은 특히 생소했는데 property의 재정의 가능 여부를 지정!
+        - configurable = false인 경우 해당 property의 삭제, 값의 변경이 금지됨
+        - 단, writable = true인 경우 value 수정, writable을 false로 변경하는 것도 가능하다
 
     <br>
 
