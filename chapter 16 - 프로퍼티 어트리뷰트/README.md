@@ -33,7 +33,7 @@
     - property attribute : get, set, enumerable, configurable
         - configurable은 특히 생소했는데 property의 재정의 가능 여부를 지정!
         - configurable = false인 경우 해당 property의 삭제, 값의 변경이 금지됨
-        - 단, writable = true인 경우 value 수정, writable을 false로 변경하는 것도 가능하다
+        - 단, writable = true인 경우 value 수정, writable을 false로 변경하는 것도 가능하다 → <a href="./configurable.js">예제 파일</a>
 
     <br>
 
@@ -51,7 +51,8 @@
 <br>
 
 #### 5️⃣ define property
-- <a href="./defineProperties.js">예제 파일</a> 쭉 읽어보는 게 이해가 더 쉬울 것!
+- <a href="./defineProperties.js">예제 파일</a> 쭉 읽어보는 게 이해가 더 쉬울 것 😁
+- 혹시나 여러 property에 대해 한 번에 정의하고자 한다면 Object.defineProperties 메소드를 활용!
 - property descriptor 객체에 누락된 property의 기본 값 :
 
 <br>
@@ -64,3 +65,17 @@
 | writable | [[ Writable ]] | false |
 | enumerable | [[ Enumerable ]] | false |
 | configurable | [[ Configurable ]] | false |
+
+<br>
+
+#### 6️⃣ 객체 변경 방지 ⭐️⭐️⭐️⭐️⭐️
+
+|메소드 이름|내용|
+|:-|:-|
+|Object.preventExtensions|객체의 property 추가 금지. 즉, 확장 금지<br><a href="./preventExtension.js">예제 파일</a>|
+|Object.seal|객체의 property 추가 및 삭제 금지 + property attribute 재정의 금지<br>해당 객체는 읽기, 쓰기 작업만 가능<br><a href="./seal.js">예제 파일</a>|
+|Object.freeze|객체의 property 값 갱신까지 금지<br>해당 객체는 읽기만 가능<br><a href="./freeze.js">예제 파일</a>|
+
+<br>
+- 단, 위의 객체 변경 방법들은 얕은 복사에 한해서 의미
+- 객체 안의 객체는 위의 함수들을 활용한 새로운 함수를 통해 제어 가능
