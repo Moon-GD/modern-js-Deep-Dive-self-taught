@@ -43,3 +43,40 @@
     - 빌트인 함수는 전역 객체가 생성될 때 함께 생성되며, 전역 객체의 경우 런타임 중 가장 먼저 생성됨 → 즉, 빌트인 함수의 prototype은 코드 실행 이전에 객체화되어 필요한 정보들이 등록되어 있다!
 
 <br>
+
+#### 5️⃣ 객체 생성 방식과 프로토타입의 결정
+- 여러 가지 객체 생성 방식 : 리터럴, Object 생성자, 사용자 생성자 함수, Object.create() ...
+- 모두 내부적으로 OrdinaryObjectCreate에 의해 생성
+- OrdinaryObjectCreate는 빈 객체를 생성한 후 (property 목록을 전달 받은 경우) property를 등록해주고, 인수로 전달 받았던 prototype을 반환될 객체의 [[ prototype ]]에 등록. 이후 객체를 반환
+- 전달되는 prototype 인수
+    - 리터럴, Object 생성자 : Object.prototype
+    - 사용자 생성자 함수 : 생성자 함수의 prototype
+
+<br>
+
+#### ⑥ property shadowing
+- 상속 관계에서 하위 객체에 의해 상위 객체의 property가 보이지 않는 현상
+- 예제로 보면 이해가 더 빠름! <a href="./propertyShadowing.js"></a>
+
+<br>
+
+#### ⑦ instance of 연산자는 사실..
+- instance of 연산자는 "생성자 함수의 prototype"이 객체의 prototype chain에 존재하는 지 여부를 반환해주는 함수!
+- 이전에 알던 "어떤 생성자 함수의 객체야?" 라는 의미로 사용하는 것과는 조금의 차이가 있음! → <a href="./instanceOf.js">예제 파일</a>
+
+<br>
+
+#### ⑧ 직접 상속
+- Object.create() 메소드를 활용하면 직접적으로 상속과 상속될 property, 그리고 property의 attribute를 지정 가능
+- 첫 번째 인자로 prototype (필수 인자), 두 번째 인자로 property list(선택 인자)를 전달
+- 이를 통해 리터럴로 생성된 객체도 상속 받을 수 있다는 장점이 있음
+- <a href="./objectCreate.js">Object.create 예제 파일</a>
+
+<br>
+
+#### ⑨ static property / method
+- Python class의 멤버 변수, Java의 static 메소드처럼 생성자 역할을 하는 함수에서 바로 접근할 수 있는 property(메소드 포함)를 static하다고 표현
+- 단, JS의 static 메소드는 인스턴스에서 접근 불가 (prototype chain에 존재하지 않기에)
+- <a href="./staticProperty.js">static property 예제 파일</a>
+
+<br>
