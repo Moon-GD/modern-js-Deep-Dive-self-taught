@@ -80,3 +80,14 @@
 - <a href="./staticProperty.js">static property 예제 파일</a>
 
 <br>
+
+#### 🔟 in 연산자, 객체의 property 존재 여부 확인 
+- in 연산자는 대상 객체가 상속받는 모든 prototype의 property를 검사 → Object.prototype.hasOwnProperty를 활용하면 대상 객체에 한정해서 property 검사 가능
+- for ... in 문도 사실은 대상 객체의 prototype chain 상의 property 중 [[ enumarable ]]이 true인 것을 열거함!
+    - 이게 배열을 순회할 때 for ... in 문보다 고차 함수, for of를 사용하는 것이 권장되는 이유임
+
+<br>
+
+※ 객체 순회에 필요한 메소드 활용해보기 → <a href="./iterateObject.js">Object.keys/values/entries 활용 예제</a>
+
+<br>
