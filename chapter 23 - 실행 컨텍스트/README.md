@@ -49,5 +49,7 @@
 #### 5️⃣ 전역 코드가 실행되는 순서 ⭐️⭐️⭐️⭐️⭐️
 - global execution context - (global lexical environment component : environment record, outer lexical environment reference, this binding) - (environment record : object / declarative environment record) - (object environment record's bindingObject - 전역 객체) 이 구조의 흐름을 잘 기억하기!!!
 - 머릿속에 들어올 때까지 칠판에 적었다가 지우는 과정을 반복해봤음!
+![전역 Context 홀로 정리](https://github.com/Moon-GD/modern-js-Deep-Dive-self-taught/assets/74173976/de16c152-9bac-45b4-823b-30eaa79764de)
+
 
 <br>
