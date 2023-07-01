@@ -51,5 +51,12 @@
 - 머릿속에 들어올 때까지 칠판에 적었다가 지우는 과정을 반복해봤음!
 ![전역 Context 홀로 정리](https://github.com/Moon-GD/modern-js-Deep-Dive-self-taught/assets/74173976/de16c152-9bac-45b4-823b-30eaa79764de)
 
+<br>
+
+#### 6️⃣ 함수 코드가 실행되는 순서
+- function execution context → (function lexical environment: function environment record) → (function environment record: 매개/지역 변수 정보, arguments 객체) → this binding → 외부 렉시컬 환경에 대한 참조 값 기입
+- 전역 코드가 실행될 때도 environment record를 만들었지만, 함수의 것과 내용이 다름을 잘 숙지하자
+- 함수 실행 컨텍스트의 외부 렉시컬 환경에 대한 참조는 해당 함수의 평가가 이루어지는 시점에 실행되고 있는 실행 컨텍스트의 렉시컬 환경임을 명시! → 아직 잘 와닿지 않는다면, 일반적으로 코드 상 상위 스코프의 렉시컬 환경 객체를 참조한다고 생각하면 됨
+- '코드 평가 → this binding → 외부 렉시컬 환경에 대한 참조 값 기입'의 순서를 잘 기억할 것
 
 <br>
