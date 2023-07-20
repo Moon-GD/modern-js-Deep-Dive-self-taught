@@ -50,7 +50,36 @@ closure(); // ?
 
 <br>
 
-#### 3️⃣
--
+#### 3️⃣ 클로저 함수가 참조하고 있는 값의 비일관성
+- 아래의 코드를 살펴보자
 
-<br>
+```javascript
+const Person = (function() { 
+    let _age = 0;
+
+    function Person(name, age) {
+        this.name = name;
+        _age = age;
+    }
+
+    Person.prototype.printAge = function() {
+        console.log(_age);
+    }
+    
+    return Person;
+}());
+
+const p1 = new Person('Moon', 26);
+p1.printAge();  // 26
+
+const p2 = new Person('Kim', 30);
+p2.printAge();  // 30
+
+p1.printAge();  // 30
+
+```
+
+- 위의 예제에서 볼 수 있듯, 클로저는 어쨌든 상위 스코프에 대한 값을 참조하고 있는 것이고, 그 값은 유일하다
+- 따라서, 인스턴스가 여러 개 생성되는 생성자 함수의 클로저 함수는 값의 변경이 발생할 수 있다
+
+<br> 
